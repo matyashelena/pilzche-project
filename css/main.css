@@ -1,0 +1,258 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button, input {
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.button-dark {
+  color: #fff;
+  background-color: #725749;
+  border: 1px solid #725749;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 12px 30px;
+  width: auto;
+  text-transform: capitalize;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-light {
+  color: #725749;
+  background-color: #fff;
+  border: 1px solid #725749;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 12px 30px;
+  width: auto;
+  text-transform: capitalize;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page_wrapper {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.hero {
+  min-height: 100vh;
+}
+
+.our-advantages {
+  background-color: #302018;
+  padding: 8px 0;
+  color: #fff;
+}
+
+.advantage-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 60px;
+}
+.advantage-item {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.advantage-item span {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.advantage-icon {
+  width: 20px;
+  height: 20px;
+  --col1: #fff;
+}
+.advantage .delivery {
+  width: 26px;
+  height: 21px;
+}
+
+.container-header {
+  width: 90%;
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+}
+.container-header .logo {
+  display: block;
+  width: 218px;
+}
+.container-header .buttons .button-dark {
+  margin-left: 60px;
+  margin-right: 10px;
+}
+
+.nav-header {
+  margin-left: auto;
+}
+.nav-header_list {
+  display: flex;
+  justify-content: center;
+  column-gap: 60px;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.nav-header_item a {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding: 10px 15px;
+}
+.nav-header .location-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.drop-down {
+  position: relative;
+}
+.drop-down::after {
+  position: absolute;
+  width: 9px;
+  height: 7px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  display: block;
+  background-image: url(../img/polygon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-header_list li .submenu {
+  min-width: 100px;
+  position: absolute;
+  z-index: 4;
+  transform-origin: 0 0;
+  transform: rotateX(-90deg);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3 linear;
+}
+.nav-header_list li .submenu a {
+  display: block;
+  background-color: #fff;
+  font-style: 14px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 2px;
+  border-bottom: 1px solid #725749;
+}
+
+.nav-header_list li:hover .submenu {
+  transform: rotateX(0deg);
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s ease-out 0.5s;
+}
+
+.intro {
+  max-height: calc(100vh - 147px);
+  overflow: hidden;
+  position: relative;
+  background: url(../img/hero-img.jpg), no-repeat, center;
+  background-size: cover;
+}
+.intro::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+.intro-content {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  max-width: 538px;
+  top: 50%;
+  left: 50%;
+  transform: translatex(-50%);
+  z-index: 3;
+}
+.intro-content_title {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 42px;
+  margin-bottom: 40px;
+}
+.intro .video {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+.intro .video-media {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.main {
+  padding: 140px 0;
+}
