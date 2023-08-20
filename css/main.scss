@@ -3,6 +3,9 @@
 $main-color: #302018;
 $secondary-color: #fff;
 $fon-color: #725749;
+$preface-color: #BA8266;
+$title-color: #302018;
+$description-color: #313131;
 $main-font: 'Inter', sans-serif;
 $title-font: 'Courgette', cursive;
 
@@ -72,10 +75,20 @@ $title-font: 'Courgette', cursive;
     height: 20px;
     --col1: #fff;
   }
-  .delivery {
+ .delivery {
     width: 26px;
     height: 21px;
   }
+}
+
+.header {
+  // position: sticky;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // width: 100%;
+  // z-index: 4;
+  // background-color: #fff;
 }
 .container-header {
   width: 90%;
@@ -150,7 +163,6 @@ $title-font: 'Courgette', cursive;
   visibility: hidden;
   opacity: 0;
   transition: all .3 linear;
-  
  
   a {
   display: block;
@@ -168,10 +180,11 @@ $title-font: 'Courgette', cursive;
   transform: rotateX(0deg);
   visibility: visible;
   opacity: 1;
-  transition: opacity 1s ease-out 0.5s;
+  // transition: opacity 1s ease-out 0.5s;
 }
 
 .intro {
+  padding-top: 110px;
   max-height: calc(100vh - 147px);
   overflow: hidden;
   position: relative;
@@ -224,5 +237,73 @@ $title-font: 'Courgette', cursive;
 .main {
   padding: 140px 0;
 }
+.preface {
+  display: inline-block;
+  color: $preface-color;
+  font-family: $main-font;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.title {
+  color: $title-color;
+  font-family: $title-font;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.description {
+  color: $description-color;
+  font-family: $main-font;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  margin-bottom: 30px;
+}
+.description:last-child {
+  margin-bottom: 0;
+}
+.product {
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+  &-description {
+    width: 100%;
+    max-width: 750px;
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    color: $description-color;
+    font-family: $main-font;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+.product-icon.delivery {
+  width: 50px;
+  height: 40px;
+}
+
 
 
