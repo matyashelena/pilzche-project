@@ -4,6 +4,7 @@ $main-color: #302018;
 $secondary-color: #fff;
 $fon-color: #725749;
 $preface-color: #BA8266;
+$color-desc: #F8E6D3;
 $title-color: #302018;
 $description-color: #313131;
 $main-font: 'Inter', sans-serif;
@@ -34,7 +35,11 @@ $title-font: 'Courgette', cursive;
 .button-light {
   @include button($fon-color, #fff);
 }
+.button-light:hover {
+  @include button($secondary-color, $fon-color);
+}
 .page_wrapper {
+  background-color: #F8F5F0;
   font-family: Arial, Helvetica, sans-serif;
 }
 .container {
@@ -102,6 +107,7 @@ $title-font: 'Courgette', cursive;
     width: 218px;
   }
   .buttons {
+    margin-left: 60px;
     .button-dark {
       margin-left: 60px;
       margin-right: 10px;
@@ -270,10 +276,11 @@ $title-font: 'Courgette', cursive;
   margin-bottom: 0;
 }
 .product {
+  margin-bottom: 140px;
   &_wrapper {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
   }
   &-description {
     width: 100%;
@@ -294,6 +301,9 @@ $title-font: 'Courgette', cursive;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 40px 0;
+    border-top: 1px solid #E9DED2;
+    border-bottom: 1px solid #E9DED2;
   }
   &-icon {
     width: 40px;
@@ -304,6 +314,72 @@ $title-font: 'Courgette', cursive;
   width: 50px;
   height: 40px;
 }
-
+.production {
+  &-title {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 750px;
+  }
+  text-align: center;
+  .title {
+    margin-bottom: 20px;
+  }
+  &-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 29px;
+    padding-bottom: 60px;
+    &_link {
+      width: 100%;
+      max-width: 360px;
+      position: relative;
+      margin-top: 40px;
+      position: relative;
+    }
+    &_description {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.00) 0.01%, rgba(0, 0, 0, 0.81) 99.99%);
+      height: 33.33%;
+      padding-top: 20%;
+      text-align: left;
+      padding-left: 30px;
+      padding-right: 20px;
+      .preface {
+        display: block;
+        color: $color-desc;
+      }
+      .img_text {
+        color: #fff;
+        font-family: $main-font;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        }
+        
+    }
+  }
+}
+// .img-text_wrapper {
+//   display: flex;
+//   align-items: center;
+//   flex-wrap: wrap;
+//   column-gap: 20px;
+// }
+.arrow {
+  width: 31px;
+  height: 8px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  // left: 15px;
+  }
+  .mr {
+    margin-right: 15px;
+  }
 
 
